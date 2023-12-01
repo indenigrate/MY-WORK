@@ -1,5 +1,5 @@
 #include <stdio.h>
 
 void main(){
-    printf("This is a test\n");
+    printf("This is a new test\n");
 }
