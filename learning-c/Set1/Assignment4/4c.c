@@ -16,13 +16,14 @@ void main(){
         printn('.',i);
         printn('.',-i);
         printf("\n");
-        if(i>0){
+        i--;
+        if(i>=0){
             j+=2;
         }
         if(i<0){
             j-=2;
         }
-        i--;
+        
     }
 }
 
