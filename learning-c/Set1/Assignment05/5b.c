@@ -10,7 +10,7 @@ void main()
 
     int arr[n];
     int max = arr[0], max2 = arr[0];
-    
+
     for (int i = 0; i < n; i++)
     {
         scanf(" %d", &arr[i]);
@@ -20,6 +20,6 @@ void main()
             max = arr[i];
         }
     }
-    
+
     printf("Second largest integer is %d \n", max2);
 }
