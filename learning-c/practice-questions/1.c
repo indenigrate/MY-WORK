@@ -5,7 +5,7 @@
 
 void question();
 
-void main()
+int main()
 {
     int NumOfTestCases;
     scanf("%d", &NumOfTestCases);
@@ -35,33 +35,18 @@ void question()
     {
         y2 = n - y2 + 1;
     }
-    // i is eqv to x
+
     int l1, l2;
-    // for l1
-    for (int i = 1; i <= n / 2; i++)
-    {
-        if (x1 == i)
-        {
-            for (int j = 1; j <= i; j++)
-            {
-                if (j > y1)
-                    break;
-                l1 = j;
-            }
-        }
-    }
-    // for l2
-    for (int i = 1; i <= n / 2; i++)
-    {
-        if (x2 == i)
-        {
-            for (int j = 1; j <= i; j++)
-            {
-                if (j > y2)
-                    break;
-                l2 = j;
-            }
-        }
-    }
+
+    if (y1 >= x1)
+        l1 = x1;
+    else
+        l1 = y1;
+
+    if (y2 >= x2)
+        l2 = x2;
+    else
+        l2 = y2;
+
     printf("%d\n", (l1 - l2) >= 0 ? (l1 - l2) : (l2 - l1));
 }
