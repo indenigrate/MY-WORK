@@ -7,6 +7,7 @@ long int gcd (long int a,long int b) ;
 int main(){
     long int a,b,x,y,count=0;
     scanf("%ld %ld %ld %ld",&a,&b,&x,&y);
+    
     long gcdd=gcd(x,y);
     x/=gcdd;
     y/=gcdd;
