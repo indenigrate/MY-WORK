@@ -18,6 +18,10 @@ int main()
 void question(){
     int n,k;
     scanf("%d %d",&n,&k);
+    if(n-(k)*(k)<0||n>k){
+            printf("NO\n");
+            return;
+        }
     check(n,k,1);
 
 }
