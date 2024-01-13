@@ -1,5 +1,6 @@
 #include <stdio.h>
 
 void main(){
-    printf("This is a new test\n");
+    unsigned int n=5;
+    printf("%u\n",n);
 }
