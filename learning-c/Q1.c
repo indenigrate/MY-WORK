@@ -45,7 +45,7 @@ int main(){
             int times,temp,check=0;
             scanf("%d",&times);
             while(times--){
-                for(int i=0;i<size-1;i++){
+                for(int i=0;i<size-1-check;i++){
                     if(array[i]==0&&i==0){
                         for(int j=0;j<size-1;j++){
                             temp=array[j];
@@ -55,7 +55,7 @@ int main(){
                         check=1;
     
                     }
-                    else if(array[i+1]==0&&check==0){
+                    else if(array[i+1]==0){
                         temp=array[i];
                         array[i]=array[i+1];
                         array[i+1]=temp;
