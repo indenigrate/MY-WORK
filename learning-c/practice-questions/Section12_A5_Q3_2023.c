@@ -1,61 +1,25 @@
 #include <stdio.h>
 #define last 199
 //void print_seq(int n);
-void print_seq2(int num);
+void print_seq(int num);
 
 int main(){
     
     int num;
-    
+    printf("enter the value of n\n");
     scanf("%d",&num);
-    
-    printf("Check\n");
-    print_seq2(num);
+    printf("print_seq\n");
+    print_seq(num);
 }
 
-// void print_seq(int n){
-//     int count =0,rem2=0,rem1=0;
-//     for(int i=n;i>=0;i-=3){
-
-//         // for(int max3=i/3;max3>0;max3--){
-//         //     printf("3 ");
-            
-//         // }
-
-//         int rem=n-i+i%3;
-
-//         for(int j=rem;j>=0;j-=2){
-
-//             rem1=rem-j+j%2;
-
-//             if(rem!=n){
-//                 for(int max3=i/3;max3>0;max3--){
-//                     printf("3 ");
-//                     }
-//                 }
-                    
-//                     for(int max2=j/2;max2>0;max2--){
-//                         printf("2 ");
-//                     }
-//             for(int k=0;k<rem1;k++){
-                
-//                     printf("1 ");
-                
-//             }
-//             printf("\n");
-//             count++;
-//         }
-//     }
-//     printf("\nCount=%d\n",count);
-// }
-
-void print_seq2(int num){
+void print_seq(int num){
     
     int arr[20][100][100]={0};
-    //[n][index of permutation][number of terms in each count]
-    // arr[n][count][last] stores number of elements in that permutation
-    // arr[n][last][last] stores the number of different permutation i.e. vlue of count for that n
-    arr[1][last][1]=1;
+    //[num][index of permutation][number of terms in each permutation]
+    // arr[num][index of permutation][last] stores number of elements in that permutation
+    // arr[num][last][last] stores the number of different permutation i.e. value of count for that num
+    // [last] stores the number of permutation and the number of elements in each perm. in the last index
+    arr[1][1][last]=1;
     arr[1][last][last]=1;
     arr[1][1][1]=1;
     
@@ -93,19 +57,14 @@ void print_seq2(int num){
                 arr[n][arr[n][last][last]][++arr[n][arr[n][last][last]][last]]=1;
             }
         }
-        //correct till here
 
-        printf("check %d\n",i);
         if(n-2>0){
             int prev=n-2;
             for(int i=1;i<=arr[prev][last][last];i++){
                 arr[n][last][last]++;
                 for(j=1;j<=arr[prev][i][last];j++){
-                    // arr[n][arr[n][last][last]-1][++arr[n][arr[n][last][last]-1][last]]=arr[prev][i][j];
                     arr[n][arr[n][last][last]][++arr[n][arr[n][last][last]][last]]=arr[prev][i][j];
                 }
-                // arr[n][arr[n][last][last]-1][++arr[n][arr[n][last][last]-1][last]]=1;
-                // arr[n][arr[n][last][last]-1][++arr[n][arr[n][last][last]-1][last]]=1;
                 arr[n][arr[n][last][last]][++arr[n][arr[n][last][last]][last]]=2;
             }
         }
@@ -115,14 +74,8 @@ void print_seq2(int num){
             for(int i=1;i<=arr[prev][last][last];i++){
                 arr[n][last][last]++;
                 for(j=1;j<=arr[prev][i][last];j++){
-                    // arr[n][arr[n][last][last]-1][++arr[n][arr[n][last][last]-1][last]]=arr[prev][i][j];
-                    // arr[n][arr[n][last][last]-2][++arr[n][arr[n][last][last]-2][last]]=arr[prev][i][j];
                     arr[n][arr[n][last][last]][++arr[n][arr[n][last][last]][last]]=arr[prev][i][j];
                 }
-                // arr[n][arr[n][last][last]-1][++arr[n][arr[n][last][last]-1][last]]=1;
-                // arr[n][arr[n][last][last]-1][++arr[n][arr[n][last][last]-1][last]]=2;
-                // arr[n][arr[n][last][last]-2][++arr[n][arr[n][last][last]-2][last]]=2;
-                // arr[n][arr[n][last][last]-2][++arr[n][arr[n][last][last]-2][last]]=1;
                 arr[n][arr[n][last][last]][++arr[n][arr[n][last][last]][last]]=3;
             }
         }
