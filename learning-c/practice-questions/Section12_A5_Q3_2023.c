@@ -6,7 +6,7 @@ void print_seq(int num);
 int main(){
     
     int num;
-    printf("enter the value of n\n");
+    printf("enter the value of n(1-10)\n");
     scanf("%d",&num);
     printf("print_seq\n");
     print_seq(num);
