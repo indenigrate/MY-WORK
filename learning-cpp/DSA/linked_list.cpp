@@ -43,7 +43,8 @@ public:
     void insert_sorted(int val);
     void remove_key(int key);
     List_node *reverse_recursive(List_node *heads, List_node *head);
-    int detect_loop();
+    List_node* detect_loop();
+    void remove_loop();
 };
 
 // Method to print the singly linked list
@@ -230,7 +231,7 @@ void Singly_linked_list::remove_key(int key){
 
 }
 
-int Singly_linked_list::detect_loop(){
+List_node* Singly_linked_list::detect_loop(){
     List_node *slow_ptr=head,*fast_ptr=head;
     while(fast_ptr!=nullptr&&fast_ptr->next!=nullptr){
         fast_ptr=fast_ptr->next->next;
@@ -242,11 +243,27 @@ int Singly_linked_list::detect_loop(){
             fast_ptr=fast_ptr->next;
             slow_ptr=slow_ptr->next;
             }
-            return fast_ptr->data;
+            return fast_ptr;
         }
     }
     
-    return 0;
+    return nullptr;
+}
+
+void Singly_linked_list::remove_loop(){
+    List_node *key=detect_loop();
+    if(key){
+        List_node *ptr=head;
+        while(ptr->next!=key){
+            ptr=ptr->next;
+        }
+        ptr=ptr->next;
+        while(ptr->next!=key){
+            ptr=ptr->next;
+        }
+        
+        ptr->next=nullptr;
+    }
 }
 // main function
 int main()
@@ -339,7 +356,10 @@ int main()
     }
     ptr->next=temp;
 
-    cout<<looped.detect_loop()<<endl;
+    cout<<looped.detect_loop()->data<<endl;
+    looped.remove_loop();
+    cout<<"removed"<<endl;
+    looped.Print_list();
     
     return 0;
 }
