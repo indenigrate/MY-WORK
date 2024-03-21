@@ -17,6 +17,8 @@ int main(){
         }
         count++;
     }
+    
+
    
     printf("%ld",count);
 }
