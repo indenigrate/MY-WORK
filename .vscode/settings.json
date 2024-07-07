@@ -3,7 +3,11 @@
         "stdio.h": "c",
         "array": "cpp",
         "string": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "ostream": "cpp",
+        "span": "cpp",
+        "vector": "cpp",
+        "deque": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
