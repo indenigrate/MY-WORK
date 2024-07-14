@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning CSS</title>
+    <!-- use padding instead of height and width -->
+    <style>
+        body {
+            background-color: rgb(30, 30, 30);
+        }
+
+        .subscribeButton {
+            background-color: red;
+            font-size: 160%;
+            border: none;
+            color: whitesmoke;
+            text-align: center;
+            padding: 3%;
+            height: 70px;
+            width: 200px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: opacity 0.15s;
+            vertical-align: middle;
+        }
+
+        .subscribeButton:hover {
+            opacity: 0.8;
+        }
+
+        .subscribeButton:active {
+            opacity: 0.6;
+        }
+
+        #joinButton {
+            height: 50px;
+            width: 105px;
+            font-weight: 200;
+            font-size: 160%;
+            background-color: white;
+            border: rgba(41, 41, 225, 0.906);
+            border-radius: 3px;
+            color: rgba(41, 41, 225, 0.906);
+            border-style: solid;
+            border-width: 1px;
+            cursor: pointer;
+            transition: background-color 0.15s,
+                color 0.15s;
+        }
+
+        #joinButton:hover {
+            background-color: rgba(41, 41, 225, 0.906);
+            color: white;
+        }
+
+        #joinButton:active {
+            opacity: 0.7;
+        }
+
+
+        .tweetButton {
+            background-color: rgb(5, 155, 210);
+
+            width: 90px;
+            height: 40px;
+            color: white;
+            border-radius: 20px;
+            border: none;
+            font-weight: bold;
+            font-size: 110%;
+            align-items: center;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: box-shadow 0.15s;
+        }
+
+        .tweetButton:hover {
+            box-shadow: 4px 4px 10px rgba(5, 155, 210, 0.15);
+        }
+        .click3D{
+            margin-top: 15px;
+            background-color: green;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: larger;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            cursor: pointer;
+            box-shadow: 3px 3px 3px rgb(115, 138, 115);
+            transition: margin-top  0.1s, margin-left 0.1s,box-shadow 0.1s;
+        }
+        .click3D:active{
+            margin-top: 18px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="subscribeButton">SUBSCRIBE</button>
+    <hr>
+    <button id="joinButton">JOIN</button>
+    <br>
+    <button class="tweetButton">Tweet</button>
+    <br>
+    <button class="click3D">3D click</button>
+</body>
+
+</html>

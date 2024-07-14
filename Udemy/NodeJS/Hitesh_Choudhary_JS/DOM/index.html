@@ -2,14 +2,26 @@
 <html lang="en">
 
 <head>
-    <!-- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> -->
+    <meta name="author" content="Devansh Soni">
+    <!-- favicon : icon beisde titles on bookmark bar -->
+    <link rel="icon"
+        href="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"
+        type="image/x-icon">
+    <meta name="description" content="Testing page">
+    <title>MY PAGE</title>
+    <style>
+        canvas {
+            border: 1px solid burlywood;
+        }
+    </style>
 </head>
-<title>MY PAGE</title>
+
 
 <body>
     <div>
+        <canvas></canvas>
         <h1 class="title">OnesinesWebsite.in</h1>
 
         <p class="editors note">The <strong>cat</strong> is <b>grumpy</b> <a href="https://google.com">this goes to
@@ -17,16 +29,77 @@
 
         <input disabled type="text" name="hello" id="1" />
 
-        <a
+        <a title="Download the image"
             href="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp">Download
             image</a>
 
         <p>This is how you put &quot;quotes in similar quotes&quot;</p>
+        <a
+            href="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp">
+            <img width=20% height=20%
+                src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"
+                alt="HeadShot">
+        </a>
 
-        <img width=20% height=20%
-            src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"
-            alt="HeadShot">
+        <h3 id="Link in a webpage"> You'll link here</h3>
+
+        <video src="src=" RSI.mp4" height="100" width="100"></video>
+
+        <video controls autoplay loop preload="auto" height="100" width="300">
+            <source src="RSI.mp4" type="video/mp4">
+        </video>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptatum ea sequi deserunt obcaecati
+            explicabo! Molestias suscipit perspiciatis aliquid, cum facere asperiores sed exercitationem dolor deserunt
+            vero earum ullam dicta.
+        </p>
+
+        <br>
+        <label for="Gender">Gender</label>
+        <select name="gender" id="">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <div>
+            <label for="Age">Age</label>
+            <input type="number" name="age" value="30">
+        </div>
+        <div>
+            <label for="Birthday">Birthday</label>
+            <input type="date" name="birthday">
+        </div>
+        <div>
+            <input type="text" name="firstName" placeholder="Enter first name">
+        </div>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+        <div style="margin-top:600px"></div>
     </div>
+
+    <hr>
+    <h2>Embedding</h2>
+    <h3>Youtube</h3>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8sXRyHI3bLw?si=5cTvsWt73sH0EDjc"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>autoplay
+        </iframe>
+    </div>
+
+    <h3>
+        Maps
+    </h3>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14666.92356607982!2d77.38985960000001!3d23.2164759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42c3f49de625%3A0x98d2981e3b07c808!2sSharda%20Hospital!5e0!3m2!1sen!2sin!4v1720535748820!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <!-- <iframe src="" frameborder="0"></iframe> -->
+    <h3>MDN</h3>
+    <iframe src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies" frameborder="10"></iframe>
 </body>
+
 
 </html>
