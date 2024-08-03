@@ -1,0 +1,45 @@
+body {
+    background-color: #333;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    max-width: 700px;
+    min-width: 500px;
+    margin-left: -250px;
+    background-color: #FDDA0D;
+    text-align: center;
+}
+
+.course-list {
+    list-style-type: none;
+    background-color: white;
+    padding: 10px 25px;
+    margin: 0px 15px;
+    text-align: left;
+}
+
+.sort-courses-btn {
+    margin: 15px;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 10px 15px;
+    background-color: #228B22;
+    transition: opacity 100ms;
+}
+
+.sort-courses-btn:hover {
+    opacity: 0.9;
+}
+
+.sort-courses-btn:active {
+    opacity: 0.6;
+}
+
+.float-right {
+    position: absolute;
+    right: 30px;
+}
